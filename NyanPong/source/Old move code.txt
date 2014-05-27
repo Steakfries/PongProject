@@ -1,0 +1,31 @@
+void seekplayer(movableObject &player, movableObject& ball)
+{
+		float speed = sqrt(ball.speed.x*ball.speed.x + ball.speed.y*ball.speed.y);
+
+		if (IsKeyDown('W') && player.position.y >= 0)
+		{
+			player.position.y = player.position.y - 1.35;
+		}
+	
+		if (IsKeyDown('S') && player.position.y <= 780)
+		{
+			player.position.y = player.position.y + 1.35;
+		}
+
+
+		void seekplayer2(movableObject &player, movableObject& ball)
+	{
+	
+		float speed = sqrt(ball.speed.x*ball.speed.x + ball.speed.y*ball.speed.y);
+
+		if (IsKeyDown(GLFW_KEY_SPECIAL+27) && player.position.y >= 0)
+		{
+			player.position.y = player.position.y - 1.35;
+		}
+	
+		if (IsKeyDown(GLFW_KEY_SPECIAL+28) && player.position.y <= 780)
+		{
+			player.position.y = player.position.y +  1.35;
+		}
+	
+	}
